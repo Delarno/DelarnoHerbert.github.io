@@ -1,0 +1,220 @@
+body {
+    background-color: #18151F;
+    color: white;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1, 
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    min-width:800px;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* End of CSS Reset script */
+
+
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0vw;
+  right: 0vw;
+  width: 100%;
+  animation: fadeBarOut 0.6s;
+}
+
+@Keyframes fadeBarOut {
+  from {background-color: rgba(32, 21, 56, 0.9);} 
+  to {background-color: rgba(32, 21, 56, 0); }
+    }
+
+.navbarscroll {
+  background-color: rgba(32, 21, 56, 0.9);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0vw;
+  width: 100%;
+  animation: fadeBar 0.6s;
+  z-index: 2;  
+}
+
+@Keyframes fadeBar {
+  from {background-color: rgba(32, 21, 56, 0); }
+  to {background-color: rgba(32, 21, 56, 0.9); }
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: whitesmoke;
+  text-align: center;
+  /*padding: 14px 16px; */
+  padding: 1.5vw 2vw;
+  font-family: "Roboto light", sans-serif;
+  font-size: 1.80vw;
+  text-decoration: none;
+  
+}
+
+.navbarscroll a {
+  float: right;
+  display: block;
+  color: whitesmoke;
+  text-align: center;
+  /*padding: 14px 16px; */
+  padding: 1.5vw 2vw;
+  font-family: "Roboto light", sans-serif;
+  font-size: 1.80vw;
+  text-decoration: none;
+  opacity: 1;
+  z-index: 2;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbarscroll a:hover {
+  text-decoration: underline;
+}
+
+.titlecard {
+  font-family: "Roboto thin";
+  font-size: 5.20vw;
+  padding: 6vw 6vw 0vw 6vw;
+  
+}
+
+.container{
+  position: absolute; 
+  width: auto;
+}
+
+.containerbg{
+  position: absolute; 
+  width: 100%;
+  background-color: #10121A;
+  padding-top: 1em;
+  z-index: 0;
+  min-width:800px;
+}
+
+.para {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  margin: 1vw 25% 1em 25%;
+  max-width: 58em;
+  min-width: 30em;
+  float: left;
+}
+
+h2 {
+  font-family: "Roboto Light", sans-serif;
+  font-size: 1.4em;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.15em;
+}
+
+.watermark {
+  font-family: "Roboto light", sans-serif;
+  text-align: center;
+  font-size: 0.8em;
+  padding-top: 60em;
+  position: bottom;
+}
+
+.blurimg {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.backbutt {
+  padding: 2em 1em 7em 0em;
+  font-size: 1.5em;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 20%;
+  padding: 5px;
+}
