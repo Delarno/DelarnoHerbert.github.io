@@ -240,6 +240,13 @@ h3 {
   padding-bottom: 0.5em;
 }
 
+.toplogo {
+  width:2.1vw; 
+  height: 100%; 
+  margin-top: 0.6vw; 
+  margin-left: 4vw;
+}
+
 /* Mobile Layout */
 
 @media screen and (max-width:800px) {
@@ -298,4 +305,12 @@ h3 {
       flex: 0;
       padding: 15px;
     }
+
+    .toplogo {
+      width:0; 
+      height: 0; 
+      margin-top: 0; 
+      margin-left: 0;
+    }
 }
+
