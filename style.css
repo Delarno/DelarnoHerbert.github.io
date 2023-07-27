@@ -1,6 +1,7 @@
 body {
     background-color: #18151F;
     color: white;
+    overflow-x: hidden;
 }
 
 /* Box sizing rules */
@@ -40,7 +41,6 @@ html:focus-within {
 html,
 body {
     height: 100%;
-    min-width:800px;
 }
 
 /* Set core body defaults */
@@ -81,7 +81,6 @@ svg {
 }
 
 /* End of CSS Reset script */
-
 
 
 .navbar {
@@ -151,7 +150,7 @@ svg {
 
 .titlecard {
   font-family: "Roboto thin";
-  font-size: 5.20vw;
+  font-size: 5.20em;
   padding: 6vw 6vw 0vw 6vw;
   
 }
@@ -167,7 +166,6 @@ svg {
   background-color: #10121A;
   padding-top: 1em;
   z-index: 0;
-  min-width:800px;
 }
 
 .para {
@@ -175,7 +173,7 @@ svg {
   font-family: "Roboto", sans-serif;
   margin: 1vw 25% 1em 25%;
   max-width: 58em;
-  min-width: 30em;
+  min-width: 37em;
   float: left;
 }
 
@@ -217,4 +215,87 @@ h3 {
 .column {
   flex: 20%;
   padding: 5px;
+}
+
+.rightimg {
+  width: 50%;
+  float: left;
+  margin: 6px 0;
+  height: auto;
+  padding: 2vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portscale {
+  padding: 7vw 0vw 30% 0vw
+}
+
+.porttitle {
+ text-align: center;
+}
+
+.portsubtitle { 
+  padding-left: 2em;
+  padding-bottom: 0.5em;
+}
+
+/* Mobile Layout */
+
+@media screen and (max-width:800px) {
+
+  .body {
+    max-width: 50%;
+    min-width: none;
+  }
+  .para {
+    width: 100%;
+    min-width: min-content;
+    max-width: 85vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+  }
+
+  .navbar a, .navbarscroll a {
+    font-size: 1.15em;
+    padding: 0.2vw 1.75vw;
+  }
+
+  .containerbg {
+    font-size: 0.8em;
+    min-width: none;
+    position: relative;
+    padding-bottom: 3vw;
+    }
+
+    .portscale {
+      padding: 2% 0vw 0vw 0vw
+    }
+    .titlecard {
+      font-size: 2.5em;
+      padding: 20% 6% 0% 5%;
+    }
+
+    .rightimg {
+      width: 100%;
+      display: block;
+      float: none;
+      text-align: center;
+      padding-bottom: 1em;
+    }
+
+    .portsubtitle { 
+      padding-left: 0;
+      padding-bottom: 0;
+      text-align: center;
+    }
+
+    .row {
+      display: block;
+    }
+    
+    .column {
+      flex: 0;
+      padding: 15px;
+    }
 }
