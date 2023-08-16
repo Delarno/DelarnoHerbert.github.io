@@ -5,28 +5,24 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="Images/DHicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Delarno Herbert Portfolio Ver.1</title>
+    <title>Delarno Herbert Portfolio Ver.2</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <div class="bgimg">
-      <div class="container">
-        <div class="navbar" id="nav">
-          <a href="contact.html">CONTACT</a>
-          <a href="workexp.html">WORK EXP</a>
-          <a href="portfolio.html">PORTFOLIO</a>
-          <a href="index.html">HOME</a>
-          <img src="Images/logo.png" alt="Delarno Herbert Design" class="toplogo">
-        </div>
-        <div class="titlecard" >
-          <h1>HOME</h1>
-        </div>
-        <svg width="75%" height="20" id="nav">
-          <line x1="0" y1="0" x2="100%" y2="0" style="stroke-width: 6px; stroke:whitesmoke;"> </line>
-        </svg>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    <div class="container">
+      <div class="navbar" id="nav">
+        <a href="contact.html">CONTACT</a>
+        <a href="workexp.html">WORK EXP</a>
+        <a href="portfolio.html">PORTFOLIO</a>
+        <a href="index.html">HOME</a>
+        <img src="Images/logo.png" alt="Delarno Herbert Design" class="toplogo">
       </div>
     </div>
 
@@ -34,46 +30,377 @@
 
   <style>
 
-    .pictoside{
+    .m-scroll {
+      display: flex;
+      position: relative;
+      width: 100%;
+      height: 14%;
+      margin: auto;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .m-scroll__title {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      width: 100%;
+      height: 100%;
+      white-space: nowrap;
+      transform: scale(2);
+      transition: all 1s ease;
+    }
+    .m-scroll__title > div {
+      display: flex;
+      -webkit-animation: scrollText 200s infinite linear;
+              animation: scrollText 200s infinite linear;
+    }
+    .m-scroll__title h1 {
+      margin: 0;
+      font-family: 'Dela Gothic One', cursive;
+      font-size: 6em;
+      color: #302033;
+      transition: all 2s ease;
+    }
+    .m-scroll__title h2 {
+      margin: 0;
+      font-family: 'Dela Gothic One', cursive;
+      font-size: 4em;
+      color: #6B6733;
+      transition: all 2s ease;
+      display: block;
+    }
+    .m-scroll__title a {
+      text-decoration: none;
+      color: white;
+    }
+
+    div:hover {
+    animation-play-state: paused;
+    }
+
+    @-webkit-keyframes scrollText {
+      from {
+        transform: translateX(0%);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+    @keyframes scrollText {
+      from {
+        transform: translateX(0%);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+
+    @keyframes scrollText {
+      from   { transform: translateX(0%); }
+      to { transform: translateX(-50%); }
     }
     
-    .bgimg {
-      background-image: url(Images/HomeBG.png);
-      min-height: 300px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: auto;
-      position: relative;
+    .namedrop {
+      font-family: 'Dela Gothic One', cursive;
+      font-size: 4em;
+      position: absolute;
+      transform: skew(-10deg, -17deg);
+      margin-left: 1em;
+      z-index: 2;
     }
+
+    .namedropsub{
+      font-size: 2em;
+      margin-top: 1.5em;
+      margin-left: 3em;
+    }
+
+    .pfp{
+      margin: 5.45% 0% 0% 50%;
+      width: 37%;
+      position: absolute;
+      z-index: 3;
+      animation: enterme 1500ms;
+      animation-delay: 1000ms;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    .pfpBlur{
+      margin: 4% 0% 0% 50%;
+      width: 39%;
+      height: auto;
+      position: absolute;
+      z-index: 2;
+      -webkit-filter: blur(40px);
+      -moz-filter: blur(40px);
+      -o-filter: blur(40px);
+      -ms-filter: blur(40px);
+      filter: blur(40px);
+      z-index: 1;
+      animation: enterme 1500ms;
+      animation-delay: 1000ms;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes enterme {
+      0% {opacity: 0; transform: translateX(500px); }
+      100% {opacity: 1; transform: translateX(0px);  }
+    }
+
+    .scrolldowntext {
+      font-family: "Roboto Light", sans-serif;
+      font-size: 2em;
+      position: absolute;
+      margin-left: 6em;
+      z-index: 2;
+      animation: slideDown ease .4s forwards .6s;
+      animation-delay: 4s;
+      opacity: 0;
+    }
+
+      @keyframes slideDown {
+    0% {transform: translateY(0); opacity: 0;}
+    100% {transform: translateY(40px);opacity:1;}
+    }
+
+    section{
+      
+    }
+
+    section .fadeelement {
+
+    }
+
+    section h1 {
+      font-family: 'Dela Gothic One', cursive;
+      font-size: 5em;
+      color: #6B6733;
+      text-align: center;
+      margin-top: 0.5em;
+    }
+
+    .reveal{
+      transform: translateY(150px);
+      opacity: 0;
+      transition: all 2s ease;
+    }
+
+    .reveal.active{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+
+    iframe {
+   display: block;
+   margin: 0 auto;
+  }
+
+  .textbox{
+    padding: 30px 30px 30px 30px;
+    background-color: #302033;
+   }
+
+  .reveal-title {
+  animation: lr-content 430ms;
+  animation-delay: 2500ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  }
+
+  .namedrop::before {
+  content: '';
+  background: #6B6733;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  animation: lr-bar 1000ms;
+  animation-fill-mode: both;
+  animation-delay: 2000ms;
+  animation-timing-function: cubic-bezier(0.500, 0.250, 0.500, 0.750);
+}
+
+  @keyframes lr-bar {  
+    0% { transform-origin: center left 0px; transform: scaleX(0); }
+    36% { transform: scaleX(1); transform-origin: center left 0px; transform: translateX(-500px); }
+    54% { transform: scaleX(1); transform-origin: center right 0px; }
+    90% { transform: scaleX(0);  transform-origin: center right 0px; }
+    100% { transform: translateX(0px); transform: scaleX(0);  transform-origin: center right 0px; }
+   }
+
+  @keyframes lr-content {
+    0% { opacity: 0; transform: skew(-5deg, -10deg); }
+    100% { opacity: 1; transform: skew(-10deg, -17deg); }
+  }
+
+  .aboutit {
+    font-size: 4em;
+    font-family: "Roboto Light", sans-serif;
+    margin: 7vw 10% 1em 10%;
+    max-width: 58em;
+    min-width: 37em;
+  }
+
+  .about {
+    font-size: 50%;
+    font-family: "Roboto Light", sans-serif;
+    margin: 1vw 100% 1em 7%;
+    max-width: 58em;
+    min-width: 37em;
+  }
 
   </style>
 
   <body>
 
-    <script src="main.js"></script>
-      
-      <div class="para">
-        <h2> About Me </h2> 
-        <p>Hello! I am a 21 year old Digital Designer and Computer Aided Draught  Designer with a large variety of skills under my belt and an inspiration to use them to the best of my ability. I always strive to improve and become efficient in any task I am set to achieve but I am always looking out to learn something new and find new interests. </p>        
-      </div>
-
-    <div class="para">
-      <h2>Hobbies</h2>
-      <h3>Motorsports</h3>
-      <p>Cars being a huge passion of mine my whole life has led to me to be invested in car mechanics and general car culture.
-          In my spare time I like to work on my project car; A 1996 Toyota Celica GT (ST202).</p>
-      <br>
-      <h3>Music Production</h3>
-      <p>Listening to music has always been a mainstay while studying long projects and lately I have gained interest in analysing genres such as Underground Hip-hop and the wide range of samples they often using spanning from 70s Brazilian classics to experimental techno songs, as such I started to learn music production as a small hobby. The music within my showcase videos are all demos of what I have made so let me know what you think!</p>  
+    <div class="pfp">
+      <img src="Images/delarno01.png">
     </div>
-    
-    <div class="watermark">
+
+    <div class="pfpBlur">
+      <img src="Images/delarno01.png">
+    </div>
+
+
+    <div class="m-scroll">
+      <div class="m-scroll__title">
+        <div>
+          <h1>
+            DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT
+            DELARNO HERBERT
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="namedrop reveal-title">
+      <p>DELARNO HERBERT</p>
+      <p>PORTFOLIO</p>
+    </div>
+
+    <div class="m-scroll">
+      <div class="m-scroll__title">
+        <div>
+          <h1>
+            DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT
+            DELARNO HERBERT
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="namedrop namedropsub reveal-title">
+      <br>
+      <p>MOTION GRAPHIC, UI/UX &</p>
+      <p>CAD DESIGNER</p>
+    </div>
+
+    <div class="m-scroll">
+      <div class="m-scroll__title">
+        <div>
+          <h1>
+            DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT
+            DELARNO HERBERT
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="m-scroll">
+      <div class="m-scroll__title">
+        <div>
+          <h1>
+            DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT
+            DELARNO HERBERT
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="m-scroll">
+      <div class="m-scroll__title">
+        <div>
+          <h1>
+            DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT
+            DELARNO HERBERT
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="m-scroll">
+      <div class="m-scroll__title">
+        <div>
+          <h1>
+            DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT
+            DELARNO HERBERT
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="scrolldowntext">
+      <p>SCROLL DOWN AND SEE MORE</p>
+    </div>
+
+    <div class="m-scroll">
+      <div class="m-scroll__title">
+        <div>
+          <h1>
+            DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT DELARNO HERBERT
+            DELARNO HERBERT
+          </h1>
+        </div>
+      </div>
+    </div>
+
+  <section>
+    <div class="reveal">
+      <h1>PORTFOLIO SHOWCASE</h1>
+    </div>
+  </section>
+
+  <section>
+
+    <div class="container reveal" style="position: relative;">
+      <iframe width="80%" height="770vh" src="https://www.youtube.com/embed/F9ZDLcS6ZXg?" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+  </section>
+
+  <section>
+    <div class="aboutit reveal">
+      <h2> About me </h2>
+      <div class="about">
+        <p>Hello! I am a 21 year old Digital Designer and Computer Aided Draught  Designer with a large variety of skills under my belt and an inspiration to use them to the best of my ability. I always strive to improve and become efficient in any task I am set to achieve but I am always looking out to learn something new and find new interests. Theres nothing I enjoy more than a challenge with a creative solution!</p>            
+      </div> 
+      </div>
+  </section>
+
+  <section>
+    <div class="aboutit textbox reveal">
+      <h2>Like what you see? Contact me!</h2>
+        <h2 style="margin: 1vw 100% 1em 12%;"><a href = "mailto: Delarno@Outlook.com">Delarno@Outlook.com</a></h2>
+      </div>
+  </section>
+
+  <section>
+    <div class="watermark reveal ">
       <p>Website Created by Delarno Herbert</p>
     </div>
+  </section>
 
-   <script type="module" src="/main.js"></script>
+
+<script src="main.js"></script>
+
   </body>
 
 </html>

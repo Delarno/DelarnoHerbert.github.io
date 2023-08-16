@@ -90,6 +90,7 @@ svg {
   right: 0vw;
   width: 100%;
   animation: fadeBarOut 0.6s;
+  z-index: 10;
 }
 
 @Keyframes fadeBarOut {
@@ -105,11 +106,11 @@ svg {
   right: 0vw;
   width: 100%;
   animation: fadeBar 0.6s;
-  z-index: 2;  
+  z-index: 9;
 }
 
 @Keyframes fadeBar {
-  from {background-color: rgba(32, 21, 56, 0); }
+  from {background-color: rgba(32, 21, 56, 0.3); }
   to {background-color: rgba(32, 21, 56, 0.9); }
 }
 
@@ -123,7 +124,7 @@ svg {
   font-family: "Roboto light", sans-serif;
   font-size: 1.80vw;
   text-decoration: none;
-  
+  z-index: 10;
 }
 
 .navbarscroll a {
@@ -137,7 +138,7 @@ svg {
   font-size: 1.80vw;
   text-decoration: none;
   opacity: 1;
-  z-index: 2;
+  z-index: 10;
 }
 
 .navbar a:hover {
@@ -165,7 +166,7 @@ svg {
   width: 100%;
   background-color: #10121A;
   padding-top: 1em;
-  z-index: 0;
+  z-index: 10;
 }
 
 .para {
