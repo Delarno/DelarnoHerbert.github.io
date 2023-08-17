@@ -135,7 +135,6 @@
       width: 39%;
       height: auto;
       position: absolute;
-      z-index: 2;
       -webkit-filter: blur(40px);
       -moz-filter: blur(40px);
       -o-filter: blur(40px);
@@ -199,11 +198,12 @@
     iframe {
    display: block;
    margin: 0 auto;
+   z-index: 3;
   }
 
   .textbox{
     padding: 30px 30px 30px 30px;
-    background-color: #302033;
+    background-color: rgba(48, 32, 51, 0.6);
    }
 
   .reveal-title {
@@ -244,7 +244,7 @@
   .aboutit {
     font-size: 4em;
     font-family: "Roboto Light", sans-serif;
-    margin: 7vw 10% 1em 10%;
+    margin: 35vh 10% 1em 10%;
     max-width: 58em;
     min-width: 37em;
   }
@@ -255,6 +255,24 @@
     margin: 1vw 100% 1em 7%;
     max-width: 58em;
     min-width: 37em;
+  }
+
+  .aboutbg {
+    position: absolute;
+    z-index: 0;
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    padding: 10vh 0 10vh 0; 
+  }
+
+  .aboutbg.reveal.active {
+    transform: scale(1.1);
   }
 
   </style>
@@ -370,10 +388,16 @@
 
   <section>
 
-    <div class="container reveal" style="position: relative;">
+    <div class="container reveal" style="position: relative; z-index: 1;">
       <iframe width="80%" height="770vh" src="https://www.youtube.com/embed/F9ZDLcS6ZXg?" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
+  </section>
+
+  <section>
+    <div class="aboutbg reveal">
+      <img src="Images/carbg.jpg">
+    </div>
   </section>
 
   <section>
@@ -386,6 +410,20 @@
   </section>
 
   <section>
+    <div class="aboutbg reveal">
+      <img src="Images/carbg02.jpg" style="padding: 20vh 0 0 0;">
+    </div>
+  </section>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <section>
     <div class="aboutit textbox reveal">
       <h2>Like what you see? Contact me!</h2>
         <h2 style="margin: 1vw 100% 1em 12%;"><a href = "mailto: Delarno@Outlook.com">Delarno@Outlook.com</a></h2>
@@ -393,7 +431,7 @@
   </section>
 
   <section>
-    <div class="watermark reveal ">
+    <div class="watermark">
       <p>Website Created by Delarno Herbert</p>
     </div>
   </section>
